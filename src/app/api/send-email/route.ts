@@ -23,9 +23,6 @@ const createGmailTransporter = () => {
   });
 };
 
-// Verify transporter configuration on startup
-const gmailTransporter = createGmailTransporter();
-
 // Email templates
 const getCompanyEmailTemplate = (data: any) => `
 <!DOCTYPE html>
@@ -406,6 +403,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Verify Gmail transporter connection before sending
+    const gmailTransporter = createGmailTransporter();
     try {
       await gmailTransporter.verify();
       console.log('✅ Gmail SMTP connection verified successfully');
