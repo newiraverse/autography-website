@@ -48,7 +48,7 @@ const footerSections = [
   {
     title: "Product",
     links: [
-      { name: "Features", href: "/#features" },
+      { name: "Features", href: "/features" },
       { name: "Pricing", href: "/pricing" },
       { name: "Blog", href: "/blog" },
       { name: "Write", href: "/blog/write" },
